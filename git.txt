@@ -67,6 +67,8 @@ Diff commands:
  Remote VS Local = git diff origin/master
 
 Pushing Changes to remote Repo
+ git fetch
+ git pull
  1st time push= git push -u origin <remote branch>
  multiple times push= git push
 
