@@ -32,6 +32,7 @@ Remove remote repo: git remote remove <name of the remote repo>
 Log commands
  Commit list in details= git log
  Commit list in one line= git log --oneline
+ All modifications are shown by = git reflog (like amends)
  List of all the authors within the project (s=summary and n = numbered) = git shortlog -s -n
  Commits list by author= git log --author <Author Name>
  OR = git log --author=<2/3 starting letters>
@@ -67,10 +68,11 @@ Diff commands:
  Remote VS Local = git diff origin/master
 
 Pushing Changes to remote Repo
- git fetch
- git pull
- 1st time push= git push -u origin <remote branch>
+ git fetch # Tells there is some change
+ git pull # Pulls the change
+ 1st time push= git push -u origin < SSH remote branch>
  multiple times push= git push
+ git push --all 
 
 Cloning a repo
  Complete repo= git clone <URL of the repo>
@@ -82,7 +84,8 @@ View List of Files
  List of file in a directory – git ls-files --directory <dir name>
 
 Configure git ignore to your system
- git config --global core.excludesFile <PATH TO .GITGNORE FILE>
+ git config --global core.excludesFile <PATH TO .GITIGNORE FILE>
+ touch .gitignore # create a ignore folder. Add the file names in .gitignore which we will ignore.(*.txt, *xlsx, dir/, file name.ppt)
 
 Checkout Commands:
  To switch to a branch = git checkout <branchname>
@@ -113,6 +116,7 @@ Revert Command
  Note:- when you want to revert from 5th commit to 3rd commit then pass the commit id of 4th Commit to revert to the 3rd commit stage.
 
 Amend Command
+To replace the change in the file or message with the last commit in local system.
  git commit --amend -m “message”
 
 Tag Command
